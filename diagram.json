@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "author": "Zaka Ahmad Ghofari",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": -60.6, "left": -122, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 240.6, "left": -0.6, "attrs": {} },
+    { "type": "wokwi-resistor", "id": "r1", "top": 71.15, "left": 0, "attrs": { "value": "220" } },
+    { "type": "wokwi-led", "id": "led1", "top": 15.6, "left": 61.4, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 28.2,
+      "left": -102.6,
+      "rotate": 90,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 7.86,
+      "left": 230.77,
+      "attrs": { "i2cAddress": "0x3c" }
+    }
+  ],
+  "connections": [
+    [ "uno:GND.2", "bb1:bp.2", "black", [ "v0" ] ],
+    [ "btn1:2.l", "uno:2", "yellow", [ "v0" ] ],
+    [ "btn1:1.r", "bb1:bp.4", "yellow", [ "v0" ] ],
+    [ "led1:C", "r1:2", "red", [ "v0" ] ],
+    [ "r1:1", "bb1:bp.8", "red", [ "v48", "h9.6" ] ],
+    [ "led1:A", "uno:13", "red", [ "v0" ] ],
+    [ "oled1:GND", "uno:GND.1", "purple", [ "v0" ] ],
+    [ "oled1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "oled1:SCL", "uno:A5", "green", [ "v0" ] ],
+    [ "oled1:SDA", "uno:A4", "blue", [ "v0" ] ],
+    [ "led1:A", "bb1:20b.f", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:19b.f", "", [ "$bb" ] ],
+    [ "btn1:1.l", "bb1:5t.d", "", [ "$bb" ] ],
+    [ "btn1:2.l", "bb1:3t.d", "", [ "$bb" ] ],
+    [ "btn1:1.r", "bb1:5b.i", "", [ "$bb" ] ],
+    [ "btn1:2.r", "bb1:3b.i", "", [ "$bb" ] ],
+    [ "r1:1", "bb1:11b.h", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:17b.h", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}
