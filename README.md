@@ -5,6 +5,7 @@ An End-to-End project that bridges **Embedded Systems (Arduino)** for data acqui
 This project goes beyond a simple game; it is a study on human consistency, the **"Foreperiod Effect"** (how waiting time affects reaction speed), and statistical convergence, visualized through a dual-axis chart.
 
 ![Data Visualization Result](ttv_2_fig.png)
+
 *(Figure 1: The dual-axis graph showing the Raw Reflex Data vs. the Running Mean convergence)*
 
 ## 🎯 Project Overview
@@ -18,6 +19,7 @@ The system consists of two main parts:
 Here is the wiring connection for the Arduino, OLED, and buttons used in this project:
 
 ![Wiring Diagram](circuit_diagram.png)
+
 *(Figure 2: Wokwi Wiring Diagram - OLED I2C connected to A4/A5, Button to Pin 2, LED to Pin 13)*
 
 ## 🌟 Key Features
